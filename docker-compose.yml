@@ -1,0 +1,10 @@
+version: '3'
+services:
+  gateway:
+    image: minhdtb/storeo-gateway
+    network_mode: "host"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      COMMON_SERVICE: localhost
